@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+
+% ---------- Packages ----------
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% ---------- Formatting ----------
+\titleformat{\section}{\large\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{1em}{}
+\setlength{\parskip}{0.75em}
+\setlength{\parindent}{0pt}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+% ---------- Document ----------
+\begin{document}
+
+\begin{center}
+    \Large\textbf{Rover Subsystem Design Overview} \\
+    \vspace{0.5em}
+    \normalsize Prepared by the Robotics Systems Design Team
+\end{center}
+
+\section{Introduction}
+A rover is an integrated electromechanical platform that requires the seamless cooperation of multiple subsystems to achieve autonomy, mobility, and reliability. This document provides an in-depth overview of the rover’s key subsystems, focusing on their responsibilities, interdependencies, and design considerations.  
+
+The rover is organized into three primary engineering subsystems:
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item \textbf{Electrical Subsystem}
+    \item \textbf{Mechanical Subsystem}
+    \item \textbf{Software Subsystem}
+\end{itemize}
+
+Additionally, the \textbf{Computing and Communication Infrastructure} integrates these subsystems through a unified hardware and protocol architecture.
+
+\section{Electrical Subsystem}
+
+\subsection{Definition and Scope}
+An \textbf{electrical component} is any device that receives or delivers electrical energy and transforms it into another form. Examples include:
+\begin{itemize}[noitemsep]
+    \item Motors that convert electrical energy into mechanical torque.
+    \item Batteries and power regulators that store and distribute electrical energy.
+    \item Sensors and actuators that convert between electrical and physical signals.
+\end{itemize}
+
+The electrical subsystem encompasses all power distribution, signal transmission, sensing, actuation, and network electronics. Supporting circuitry such as regulators, power converters, protection circuits, and control logic are part of this subsystem.  
+
+Only bare devices such as motor drivers or transducers—those directly converting electrical energy to mechanical energy—are co-classified under both the electrical and mechanical subsystems.
+
+\subsection{Responsibilities}
+The electrical subsystem team is responsible for:
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Power Management and Distribution:} Designing regulated voltage rails, ensuring proper current delivery to all subsystems, implementing fuses, reverse-polarity protection, and efficient DC-DC converters.
+    \item \textbf{Signal Conditioning and Filtering:} Managing noise suppression, implementing filters (RC, LC, or digital), and maintaining high signal integrity across analog and digital domains.
+    \item \textbf{Sensor and Actuator Integration:} Interfacing various sensors (IMU, encoders, temperature, GPS, LiDAR) and actuators (motors, servos, solenoids) with correct voltage levels, isolation, and communication standards.
+    \item \textbf{Network Infrastructure:} Establishing robust inter-device communication using the \textbf{Controller Area Network (CAN)} protocol to enable deterministic data exchange and fault-tolerant control.
+    \item \textbf{Safety and Monitoring:} Incorporating watchdog circuits, overcurrent protection, emergency stop hardware, and telemetry monitoring for system health diagnostics.
+\end{enumerate}
+
+\subsection{Interdisciplinary Collaboration}
+The electrical team must coordinate closely with:
+\begin{itemize}[noitemsep]
+    \item \textbf{Software Subsystem:} To ensure all components conform to protocol standards, SNR (Signal-to-Noise Ratio) thresholds, and optimal operating frequencies.
+    \item \textbf{Mechanical Subsystem:} To design waterproof enclosures and durable wiring harnesses that meet \textbf{Geometric Dimensioning and Tolerancing (GD\&T)} standards and withstand environmental stresses.
+\end{itemize}
+
+\section{Mechanical Subsystem}
+
+\subsection{Definition and Scope}
+The \textbf{mechanical subsystem} encompasses all structural and physical design aspects of the rover, including chassis design, suspension, drivetrain, and protective enclosures. Its goal is to ensure stability, durability, and serviceability under the mission’s environmental conditions.
+
+\subsection{Responsibilities}
+The mechanical subsystem team is responsible for:
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Chassis and Frame Design:} Creating a lightweight yet rigid structural frame to support payloads, components, and drive assemblies.
+    \item \textbf{Mobility System:} Designing the suspension, wheel or track assemblies, and steering mechanisms optimized for traction and maneuverability.
+    \item \textbf{Thermal Management:} Incorporating heat sinks, airflow paths, and insulation materials to maintain optimal temperature for electrical and computing components.
+    \item \textbf{Enclosure and Waterproofing:} Designing IP-rated enclosures for electronics, ensuring all cabling and joints are sealed against moisture and dust ingress.
+    \item \textbf{Manufacturing and Tolerancing:} Producing CAD models with defined GD\&T annotations to ensure dimensional accuracy and assembly repeatability.
+\end{enumerate}
+
+\subsection{Collaboration with Other Teams}
+The mechanical team interfaces directly with:
+\begin{itemize}[noitemsep]
+    \item \textbf{Electrical Subsystem:} To provide mounting points, cooling solutions, and protection for sensitive electronics.
+    \item \textbf{Software Subsystem:} To supply kinematic and dynamic parameters that influence control algorithms and motion planning.
+\end{itemize}
+
+\section{Software Subsystem}
+
+\subsection{Definition and Scope}
+The \textbf{software subsystem} governs all aspects of the rover’s operation, from low-level control and communication to high-level autonomy and mission logic. It acts as the connective tissue between mechanical actions and electrical responses.
+
+\subsection{Responsibilities}
+The software subsystem team is responsible for:
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Embedded Firmware Development:} Programming microcontrollers (e.g., ESP32) to handle sensor acquisition, motor control, and inter-device communication.
+    \item \textbf{High-Level Control Software:} Implementing algorithms for localization, path planning, navigation, and obstacle avoidance using the NVIDIA Jetson platform.
+    \item \textbf{Networking and Communication Protocols:} Developing and maintaining reliable data transmission systems, including \textbf{CAN}, UART, and TCP/IP interfaces. Determining whether half-duplex or full-duplex communication is optimal for each module.
+    \item \textbf{Telemetry and Diagnostics:} Designing data logging systems to record telemetry from sensors, power systems, and network nodes for post-mission analysis.
+    \item \textbf{System Integration and Testing:} Validating software modules in conjunction with hardware in a hardware-in-the-loop (HIL) environment to ensure robustness.
+\end{enumerate}
+
+\subsection{Collaboration}
+The software team must coordinate with:
+\begin{itemize}[noitemsep]
+    \item \textbf{Electrical Subsystem:} To confirm signal levels, communication baud rates, and timing synchronization.
+    \item \textbf{Mechanical Subsystem:} To model physical constraints, ensure control loops are tuned for system inertia, and adapt algorithms to terrain and mechanical feedback.
+\end{itemize}
+
+\section{Computing and Communication Infrastructure}
+
+\subsection{Primary and Secondary Processors}
+The rover’s computing architecture is designed around a dual-tier control system:
+\begin{itemize}[noitemsep]
+    \item \textbf{Primary Computer:} NVIDIA Jetson Nano, responsible for high-level computation, vision processing, and AI-based decision-making.
+    \item \textbf{Secondary Chipset:} ESP32 microcontroller, dedicated to low-level sensor acquisition, actuator control, and real-time communication with the Jetson.
+\end{itemize}
+
+\subsection{Communication Protocol}
+Inter-device communication utilizes the \textbf{Controller Area Network (CAN)} protocol for deterministic, fault-tolerant data exchange between all control nodes. Auxiliary UART links are used for debugging and interfacing with legacy or diagnostic devices.
+
+\subsection{Power Management and Safety}
+A dedicated \textbf{power management unit (PMU)} supervises voltage regulation, battery health, and thermal protection. An integrated \textbf{watchdog timer} provides system recovery in the event of software lock-up, and all telemetry is logged for diagnostic purposes.
+
+\section{Subsystem Collaboration and Integration}
+
+Seamless collaboration between the electrical, mechanical, and software subsystems is essential for mission success. Each subsystem’s design influences the others through power, weight, and data dependencies.  
+
+Regular interdisciplinary reviews, simulation sessions, and integration tests must be conducted to ensure all subsystems operate within defined parameters and contribute to overall system reliability and performance.
+
+\end{document}
