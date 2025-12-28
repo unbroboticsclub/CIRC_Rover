@@ -1,0 +1,36 @@
+[0.939s] Invoking command in '/home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/src/rover_hardware/rover_hardware': PYTHONPATH=/home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/rover_hardware build --build-base /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/build install --record /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/install.log --single-version-externally-managed install_data
+[1.333s] running egg_info
+[1.334s] creating ../../../build/rover_hardware/rover_hardware.egg-info
+[1.335s] writing ../../../build/rover_hardware/rover_hardware.egg-info/PKG-INFO
+[1.335s] writing dependency_links to ../../../build/rover_hardware/rover_hardware.egg-info/dependency_links.txt
+[1.335s] writing entry points to ../../../build/rover_hardware/rover_hardware.egg-info/entry_points.txt
+[1.335s] writing requirements to ../../../build/rover_hardware/rover_hardware.egg-info/requires.txt
+[1.335s] writing top-level names to ../../../build/rover_hardware/rover_hardware.egg-info/top_level.txt
+[1.336s] writing manifest file '../../../build/rover_hardware/rover_hardware.egg-info/SOURCES.txt'
+[1.338s] reading manifest file '../../../build/rover_hardware/rover_hardware.egg-info/SOURCES.txt'
+[1.339s] writing manifest file '../../../build/rover_hardware/rover_hardware.egg-info/SOURCES.txt'
+[1.339s] running build
+[1.339s] running build_py
+[1.340s] creating /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/build
+[1.340s] creating /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/build/lib
+[1.340s] creating /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/build/lib/rover_hardware
+[1.340s] copying rover_hardware/__init__.py -> /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/build/lib/rover_hardware
+[1.340s] copying rover_hardware/ros2_mcu_bridge.py -> /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/build/lib/rover_hardware
+[1.340s] running install
+[1.341s] running install_lib
+[1.342s] creating /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/lib/python3.10/site-packages/rover_hardware
+[1.342s] copying /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/build/lib/rover_hardware/__init__.py -> /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/lib/python3.10/site-packages/rover_hardware
+[1.342s] copying /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/build/lib/rover_hardware/ros2_mcu_bridge.py -> /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/lib/python3.10/site-packages/rover_hardware
+[1.343s] byte-compiling /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/lib/python3.10/site-packages/rover_hardware/__init__.py to __init__.cpython-310.pyc
+[1.343s] byte-compiling /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/lib/python3.10/site-packages/rover_hardware/ros2_mcu_bridge.py to ros2_mcu_bridge.cpython-310.pyc
+[1.344s] running install_data
+[1.344s] creating /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/share/ament_index
+[1.345s] creating /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/share/ament_index/resource_index
+[1.345s] creating /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/share/ament_index/resource_index/packages
+[1.345s] copying resource/rover_hardware -> /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/share/ament_index/resource_index/packages
+[1.345s] copying package.xml -> /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/share/rover_hardware
+[1.345s] running install_egg_info
+[1.347s] Copying ../../../build/rover_hardware/rover_hardware.egg-info to /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/lib/python3.10/site-packages/rover_hardware-0.0.0-py3.10.egg-info
+[1.348s] running install_scripts
+[1.374s] writing list of installed files to '/home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/install.log'
+[1.399s] Invoked command in '/home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/src/rover_hardware/rover_hardware' returned '0': PYTHONPATH=/home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/install/rover_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/rover_hardware build --build-base /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/build install --record /home/yurmne/Documents/Coding/School/nbrobotics/CIRC_2025_roverROS/rover_ws/build/rover_hardware/install.log --single-version-externally-managed install_data
