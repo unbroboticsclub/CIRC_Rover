@@ -1,5 +1,5 @@
 rover_bringup - For running all nodes  
-rover_description - URDF, Xacro, meshes, frames (metadata for nodes)
+rover_description - URDF, Xacro, meshes, frames (metadata for nodes)  
 rover_interfaces - To define messages, services, actions  
 rover_hardware - nodes which directly interact with motors, sensors and MCUs  
 rover_control - nodes for motion control + teleoperations + safety logic  
