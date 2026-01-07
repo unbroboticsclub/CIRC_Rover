@@ -6,10 +6,6 @@ This repository serves as the official workspace and documentation hub for the *
 
 ## Directory Overview
 
-# CIRC Rover Project Directory 
-
-This repository serves as the official workspace and documentation hub for the **CIRC 2026 Rover Project** under the **UNB Robotics Club**. It defines a standardized folder structure for managing all rover-related documentation, design assets, subsystems, and operational materials in a clear and organized manner.
-
 ---
 
 ```text
